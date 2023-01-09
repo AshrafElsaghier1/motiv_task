@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="bg-white d-flex align-items-center" id="navbar">
-      <Container>
+      <Container className="px-4">
         <Row>
           <Col className="d-flex align-items-center">
             <InputGroup className="input__container rounded">
@@ -39,10 +39,10 @@ const Navbar = () => {
                 variant="none"
                 className="p-0"
               >
-                <Dropdown.Item>
+                <Dropdown.Item as="button">
                   <NavLink to="/">Settings </NavLink>
                 </Dropdown.Item>
-                <Dropdown.Item>
+                <Dropdown.Item as="button">
                   <NavLink to="/">Log out </NavLink>
                 </Dropdown.Item>
               </DropdownButton>

@@ -1,27 +1,22 @@
-import Sidebar from "./components/sidebar/Sidebar";
-
+import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from "./components/navbar/Navbar";
-import { Container } from "react-bootstrap";
+import Dashboard from './pages/dashboard/Dashboard';
+import BookingCar from './pages/booking/BookingCar';
+import Error from './components/error/Error';
+import Layout from './components/layout/Layout';
+
 function App() {
   return (
-    <main>
+    <>
 
-      <div className="row  w-100 g-0" >
-        <aside className="col-md-3  col-lg-2 bg-white">
-          <Sidebar />
-        </aside>
-        <div className="col-md-9 col-lg-10 bg-light">
-          <Navbar />
-          <Container className="px-3">
-
-
-
-          </Container>
-        </div>
-
-      </div>
-    </main>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/booking" element={<BookingCar />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 

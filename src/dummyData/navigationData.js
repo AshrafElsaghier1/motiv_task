@@ -5,7 +5,7 @@ import bag from "../assets/imgs/icons/bag.png"
 import cart from "../assets/imgs/icons/cart.png"
 import cut from "../assets/imgs/icons/cut.png"
 import calender from "../assets/imgs/icons/calender.png"
-import comment from "../assets/imgs/icons/cut.png"
+import comment from "../assets/imgs/icons/comment.png"
 export const navigationItems = [
     {
         id: 1,

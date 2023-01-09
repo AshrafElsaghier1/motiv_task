@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import ListGroup from "react-bootstrap/ListGroup";
 
-import { navigationItems } from "../../dummyData/data";
+import { navigationItems } from "../../dummyData/navigationData";
 
 import "./links.scss";
 const Links = () => {
@@ -10,7 +10,7 @@ const Links = () => {
       {navigationItems.map(({ id, link, icon, pathLink }) => (
         <ListGroup.Item
           key={id}
-          as="li"
+          as="button"
           className="sidebar__li w-100 d-flex align-items-center border-0 rounded  p-0 mb-2"
         >
           <NavLink
