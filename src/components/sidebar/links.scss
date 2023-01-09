@@ -1,0 +1,16 @@
+#sidebar__ul {
+    .sidebar__li {
+
+        .sidebar__link {
+            transition: .4s ease-in-out;
+            font-family: "DM Sans";
+            font-size: .9rem;
+            font-weight: 500;
+
+            &.active,
+            &:hover {
+                background-color: var(--hover-color);
+            }
+        }
+    }
+}

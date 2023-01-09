@@ -1,0 +1,36 @@
+#navbar {
+    height: 60px;
+    border-left: 1px solid var(--hover-color);
+
+    .input__container {
+        background-color: var(--grey-color);
+        max-width: 358px;
+        border-radius: 8px;
+
+        input {
+            font-size: 1rem;
+            color: var(--text-color);
+            caret-color: #EF9011;
+
+            &::placeholder {
+                font-family: 'DM Sans';
+                font-size: 1rem;
+                color: var(--text-color)
+            }
+        }
+    }
+
+    .sittings__container {
+        .notification__icon {
+            cursor: pointer;
+        }
+
+        #dropdown-basic-button {
+            border: none !important;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
