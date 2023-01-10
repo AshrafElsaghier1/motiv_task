@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './pages/dashboard/Dashboard';
 import BookingCar from './pages/booking/BookingCar';
@@ -11,8 +11,10 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/booking" element={<BookingCar />} />
+          <Route />
+          <Route path="/" element={<Navigate to="/dashboard" />} />
+          <Route path='dashboard' element={<Dashboard />} />
+          <Route path="booking" element={<BookingCar />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

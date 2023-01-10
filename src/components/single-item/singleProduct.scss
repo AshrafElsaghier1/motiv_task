@@ -1,12 +1,12 @@
 #product__container {
     background-color: var(--white-color);
+    border-radius: 16px;
 
     .product__inner-top {
         h4 {
             color: var(--secondary-color);
             font-weight: 700;
             font-size: 1.125rem;
-
         }
 
         h6 {
@@ -28,7 +28,7 @@
             }
 
             &:hover,
-            .active {
+            &.active {
                 svg {
                     display: none;
 
@@ -58,7 +58,7 @@
             font-weight: 400;
             font-size: 1rem;
 
-            b {
+            .price {
                 color: var(--secondary-color);
                 font-weight: 500;
                 font-size: 18px;

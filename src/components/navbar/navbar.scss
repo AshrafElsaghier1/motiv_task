@@ -1,6 +1,9 @@
 #navbar {
     height: 60px;
     border-left: 1px solid var(--hover-color);
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid var(--bg-color);
 
     .input__container {
         background-color: var(--grey-color);

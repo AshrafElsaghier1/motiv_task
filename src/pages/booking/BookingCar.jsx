@@ -4,7 +4,7 @@ import { products } from "../../dummyData/productsData";
 import "./booking.scss";
 const BookingCar = () => {
   return (
-    <div className="booking__container" id="booking">
+    <div className="booking__container pt-5" id="booking">
       <h2 className="title__heading ">Booking</h2>
       <>
         <Filter />
