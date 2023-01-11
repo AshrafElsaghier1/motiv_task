@@ -7,6 +7,9 @@ import car6 from "../assets/imgs/products/car-6.png"
 import car7 from "../assets/imgs/products/car-7.png"
 import car8 from "../assets/imgs/products/car-8.png"
 import car9 from "../assets/imgs/products/car-9.png"
+import car10 from "../assets/imgs/products/car-10.png"
+import car11 from "../assets/imgs/products/car-11.png"
+import car12 from "../assets/imgs/products/car-12.png"
 
 
 export const products = [
@@ -90,4 +93,34 @@ export const products = [
         transmission: "manual",
         customers: 2
     }
+]
+
+export const recommendedItems = [
+    {
+        id: 1,
+        title: '64% Recommend',
+        price: 32,
+        imgUrl: car10,
+        distance: "132k",
+        name: "Mini Cooper",
+        bgColor: "#E1DFA4"
+    }, {
+        id: 2,
+        title: '74% Recommend',
+        price: 28,
+        imgUrl: car11,
+        distance: "130k",
+        name: "Porsche 911 Carrera",
+        bgColor: "#E3ECF1"
+    }, {
+        id: 3,
+        title: '74% Recommend',
+        price: 28,
+        imgUrl: car12,
+        bgColor: "#F4E3E5",
+        distance: "130k",
+        name: "Mini Cooper"
+    },
+
+
 ]

@@ -1,7 +1,7 @@
 import { Col, Form, Row } from "react-bootstrap";
 import { BsUiRadiosGrid } from "react-icons/bs";
 import { RxMixerHorizontal } from "react-icons/rx";
-import "./filter.scss";
+import "./style.scss";
 const Filter = () => {
   return (
     <div id="filter__container">

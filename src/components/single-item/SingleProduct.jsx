@@ -2,8 +2,8 @@ import { Col } from "react-bootstrap";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import { CiRepeat } from "react-icons/ci";
-import "./singleProduct.scss";
 import { useState } from "react";
+import "./style.scss";
 const SingleProduct = ({
   name,
   price,
@@ -17,7 +17,7 @@ const SingleProduct = ({
 
   return (
     <Col className="col mb-4">
-      <div className="product__container bg-white p-3" id="product__container">
+      <div className="product__container-car   ">
         <div className="product__inner-top d-flex justify-content-between align-items-start ">
           <div>
             <h4> {name} </h4>

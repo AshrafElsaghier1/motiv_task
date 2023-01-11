@@ -3,12 +3,14 @@
     border-left: 1px solid var(--hover-color);
     position: sticky;
     top: 0;
-    border-bottom: 1px solid var(--bg-color);
+    background-color: var(--white-color);
+    transition: var(--transition);
 
     .input__container {
         background-color: var(--grey-color);
         max-width: 358px;
         border-radius: 8px;
+        transition: var(--transition);
 
         input {
             font-size: 1rem;
@@ -35,6 +37,10 @@
             &::after {
                 display: none;
             }
+        }
+
+        .theme__mode {
+            color: #808191
         }
     }
 }

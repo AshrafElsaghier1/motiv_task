@@ -1,30 +1,26 @@
 #feat__container {
-    background-color: var(--white-color);
+    background-color: var(--theme-background);
     padding: 20px 55px;
     border-radius: 14px;
     text-align: center;
-    transition: .4s ease-in-out;
+    transition: var(--transition);
 
     .feat__inner-top {
         h3 {
             font-weight: 700;
             font-size: 22px;
             color: var(--secondary-color);
-            transition: .4s ease-in-out;
-
+            transition: var(--transition);
         }
 
         .icon__container {
             height: 38px;
             width: 38px;
-            transition: .4s ease-in-out;
+            transition: var(--transition);
         }
-
-
     }
 
     .feat__inner-bottom {
-
         .CircularProgressbar {
             width: 112px;
 
@@ -35,8 +31,12 @@
             .CircularProgressbar-path,
             .CircularProgressbar-trail,
             .CircularProgressbar-text {
-                transition: .4s ease-in-out;
+                transition: var(--transition);
                 border-radius: 10px;
+            }
+
+            .CircularProgressbar-trail {
+                stroke-width: 7.9px;
             }
 
             .CircularProgressbar-text {

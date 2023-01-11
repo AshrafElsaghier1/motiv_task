@@ -11,6 +11,7 @@
         background-image: url("../../assets/imgs/icons/rectangle.png");
         background-position: right 1.3rem center;
         background-size: 13px 8px;
+        transition: var(--transition);
 
         &:focus {
             box-shadow: none !important;
@@ -19,7 +20,7 @@
 
     .filter__btn {
         background-color: var(--white-color);
-        transition: .5s ease-in-out;
+        transition: var(--transition);
         font-size: 20px;
         color: #777E91;
         width: 40px;

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@200;300;400;500;600&display=swap");
-:root {
+.app {
   --white-color: #fff;
   --main-color: #a162f7;
   --hover-color: #f3f5f8;
@@ -8,6 +8,17 @@
   --grey-color: #f5f4f6;
   --secondary-color: #242731;
   --link-color: #5f6165;
+  --dark-color: #1f2128;
+
+  --transition: 0.4s ease-in-out;
+  --layout-background: #f5f5f5;
+  --theme-background: #fff;
+  --theme-text-color: #242731;
+}
+.app#dark {
+  --layout-background: #1f2128;
+  --theme-background: #242731;
+  --theme-text-color: #fff;
 }
 body {
   font-family: "DM Sans", sans-serif;
@@ -41,4 +52,8 @@ input:focus {
 a {
   text-decoration: none;
   color: var(--link-color) !important;
+}
+
+svg {
+  font-size: 16.67px;
 }

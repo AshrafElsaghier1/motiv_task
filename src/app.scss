@@ -1,0 +1,198 @@
+#dark {
+    .layout__container {
+        background-color: var(--dark-color);
+    }
+
+    #navbar {
+        background-color: var(--secondary-color);
+        border-color: var(--dark-color);
+
+        .input__container {
+            background-color: var(--dark-color);
+        }
+
+    }
+
+    #sidebar {
+        background-color: var(--secondary-color);
+
+        #sidebar__ul {
+            .sidebar__li {
+                background-color: transparent;
+
+                .sidebar__link {
+                    background-color: var(--secondary-color);
+
+                    &.active,
+                    &:hover {
+                        background-color: #292E3D;
+                        color: var(--white-color) !important
+                    }
+                }
+
+            }
+        }
+
+        .sidebar__inner-content {
+            .sidebar__top {
+                .logo {
+                    a {
+                        color: var(--white-color) !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    #feat__container {
+        background-color: var(--secondary-color);
+
+        .feat__inner-top {
+            h3 {
+                color: var(--white-color);
+            }
+
+        }
+
+        .feat__inner-bottom {
+
+            .CircularProgressbar {
+                .CircularProgressbar-text {
+                    fill: var(--white-color);
+
+                }
+            }
+        }
+
+        &:hover {
+            background-color: var(--main-color);
+            color: var(--white-color) !important;
+
+            .feat__inner-top {
+                h3 {
+
+                    color: var(--white-color);
+                }
+
+                .icon__container {
+                    background-color: #A66FF0 !important;
+                    color: var(--white-color) !important;
+                }
+            }
+
+            .feat__inner-bottom {
+
+                .CircularProgressbar {
+                    .CircularProgressbar-path {
+                        stroke: var(--white-color) !important;
+                    }
+
+                    .CircularProgressbar-trail {
+                        stroke: #B37EFC !important;
+                    }
+
+                    .CircularProgressbar-text {
+                        fill: var(--white-color);
+
+                    }
+                }
+            }
+
+        }
+
+
+    }
+
+    #booking {
+        .title__heading {
+
+            color: var(--white-color)
+        }
+
+        #filter__container {
+            .select__input {
+                background-color: var(--secondary-color);
+                color: #E0E4E7;
+
+            }
+
+            .filter__btn {
+                background-color: var(--secondary-color);
+
+                color: #E0E4E7;
+
+
+                &.active,
+                &:hover {
+                    background-color: var(--main-color);
+                    color: var(--white-color)
+                }
+
+            }
+        }
+
+        .product__container-car {
+            background-color: var(--secondary-color);
+
+
+            .product__inner-top {
+                h4 {
+                    color: var(--white-color);
+
+                }
+
+                h6 {
+                    font-weight: 400;
+                    font-size: 1rem;
+                    color: #72767C;
+                }
+
+                .icon__container {
+                    color: #A4A5A6;
+
+                    svg {
+                        transition: .5s ease-in-out;
+
+                        &:last-child {
+                            display: none;
+                            color: #F84F56;
+                        }
+                    }
+
+                    &:hover,
+                    &.active {
+                        svg {
+                            display: none;
+
+                            &:last-child {
+                                display: block;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .product__inner-bottom {
+
+                .clients__count,
+                .transmission,
+                .inner__price {
+                    color: #E0E4E7;
+
+                    .price {
+                        color: var(--white-color);
+
+                    }
+                }
+
+
+            }
+
+        }
+    }
+
+
+}

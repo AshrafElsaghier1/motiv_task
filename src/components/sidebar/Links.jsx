@@ -11,13 +11,13 @@ const Links = () => {
         <ListGroup.Item
           key={id}
           as="button"
-          className="sidebar__li w-100 d-flex align-items-center border-0 rounded  p-0 mb-2"
+          className="sidebar__li w-100 d-flex align-items-center border-0   p-0 mb-2 "
         >
           <NavLink
             to={pathLink ? pathLink : "/"}
             className="sidebar__link w-100 d-flex align-items-center gap-3 rounded p-2  "
           >
-            <img src={icon} alt={`icon__${id}`} />
+            <span> {icon} </span>
             <span> {link} </span>
           </NavLink>
         </ListGroup.Item>

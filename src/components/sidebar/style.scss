@@ -1,0 +1,28 @@
+#sidebar {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: var(--white-color);
+    transition: var(--transition);
+
+    .sidebar__inner-content {
+        .sidebar__top {
+            .logo {
+                height: 60px;
+                display: flex;
+                align-items: center;
+
+                a {
+                    font-weight: 700;
+                    font-size: 1.3rem;
+                    color: var(--dark-color);
+
+                }
+            }
+        }
+    }
+
+    .theme__mode {
+        color: #808191
+    }
+}

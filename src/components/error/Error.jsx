@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "./error.scss";
+import "./style.scss";
 const Error = () => {
   const navigator = useNavigate();
   const navigationHandler = () => navigator("/dashboard");

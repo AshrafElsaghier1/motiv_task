@@ -1,64 +1,66 @@
-import shape from "../assets/imgs/icons/shape.png"
-import dashboard from "../assets/imgs/icons/dashboard.png"
-import car from "../assets/imgs/icons/car.png"
-import bag from "../assets/imgs/icons/bag.png"
-import cart from "../assets/imgs/icons/cart.png"
-import cut from "../assets/imgs/icons/cut.png"
-import calender from "../assets/imgs/icons/calender.png"
-import comment from "../assets/imgs/icons/comment.png"
+import { RxDashboard } from "react-icons/rx";
+import { HiOutlineSupport } from "react-icons/hi";
+import { AiOutlineCar } from "react-icons/ai";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { BsCart2 } from "react-icons/bs";
+import { RiScissors2Line } from "react-icons/ri";
+import { BsCalendar4Range } from "react-icons/bs";
+import { BiMessageDetail } from "react-icons/bi";
+
+
 export const navigationItems = [
     {
         id: 1,
         link: "Dashboard",
-        icon: dashboard,
+        icon: <RxDashboard />,
         pathLink: "dashboard"
     },
     {
         id: 2,
         link: "Assets",
-        icon: shape,
+        icon: <HiOutlineSupport />,
         pathLink: "assets"
 
     },
     {
         id: 3,
         link: "Booking",
-        icon: car,
+        icon: <AiOutlineCar />,
         pathLink: "booking"
 
     },
     {
         id: 4,
         link: "Sell Cars",
-        icon: bag,
+        icon: <HiOutlineShoppingBag />,
         pathLink: "sell-cars"
 
     },
     {
         id: 5,
         link: "Buy Cars",
-        icon: cart,
+        icon: <BsCart2 />,
         pathLink: "buy-cars"
 
     },
     {
         id: 6,
         link: "Services",
-        icon: cut,
+        icon: <RiScissors2Line />,
         pathLink: "services"
 
     },
     {
         id: 7,
         link: "Calender",
-        icon: calender,
+        icon: <BsCalendar4Range />,
         pathLink: "calender"
 
     },
     {
         id: 8,
         link: "Messages",
-        icon: comment,
+        icon: <BiMessageDetail />,
         pathLink: "messages"
 
     }

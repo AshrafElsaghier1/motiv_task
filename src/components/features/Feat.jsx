@@ -1,8 +1,7 @@
 import { Col } from "react-bootstrap";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-
-import "./features.scss";
+import "./style.scss";
 const Feat = ({ title, text, precentage, color, icon, bgColor }) => {
   return (
     <Col className="mb-3">
@@ -22,6 +21,7 @@ const Feat = ({ title, text, precentage, color, icon, bgColor }) => {
             value={precentage}
             text={text}
             circleRatio={0.75}
+            transition="0.5s ease 0s"
             rounded={true}
             styles={buildStyles({
               rotation: 1 / 2 + 1 / 8,

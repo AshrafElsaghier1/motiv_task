@@ -2,19 +2,23 @@ import { Container, ListGroup } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/imgs/logo.png";
 import Links from "./Links";
+import { FiSettings } from "react-icons/fi";
+import { SlLogout } from "react-icons/sl";
 
-import cog from "../../assets/imgs/icons/cog.png";
-import logout from "../../assets/imgs/icons/logout.png";
-import "./sidebar.scss";
+import "./style.scss";
+
 const Sidebar = () => {
   return (
-    <div id="sidebar">
+    <div id="sidebar" className="pb-2">
       <Container className="h-100 px-3">
         <div className="sidebar__inner-content d-flex justify-content-between flex-column h-100 ">
           <div className="sidebar__top">
             <div className="logo">
-              <Link to="/">
-                <img src={logo} alt="logo" />
+              <Link to="/" className="d-flex gap-2 align-items-center">
+                <div className="d-flex align-items-center">
+                  <img src={logo} alt="logo" />
+                </div>
+                <h2 className="mb-0"> Motiv.</h2>
               </Link>
             </div>
             <div className="sidebar__items pe-3 mt-3">
@@ -29,9 +33,11 @@ const Sidebar = () => {
               >
                 <NavLink
                   to="/sittings"
-                  className="sidebar__link w-100 d-flex align-items-center gap-3 rounded p-2  "
+                  className="sidebar__link w-100 d-flex align-items-center gap-3 rounded p-2 "
                 >
-                  <img src={cog} alt={`icon__cog`} />
+                  <span>
+                    <FiSettings />
+                  </span>
                   <span> Sittings </span>
                 </NavLink>
               </ListGroup.Item>
@@ -43,7 +49,7 @@ const Sidebar = () => {
                   to="/logout"
                   className="sidebar__link w-100 d-flex align-items-center gap-3 rounded p-2  "
                 >
-                  <img src={logout} alt={`icon__logout`} />
+                  <span> {<SlLogout />} </span>
                   <span> Log out</span>
                 </NavLink>
               </ListGroup.Item>

@@ -1,7 +1,7 @@
 import Filter from "../../components/filter/Filter";
 import SingleProduct from "../../components/single-item/SingleProduct";
 import { products } from "../../dummyData/productsData";
-import "./booking.scss";
+import "./style.scss";
 const BookingCar = () => {
   return (
     <div className="booking__container pt-5" id="booking">

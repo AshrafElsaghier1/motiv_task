@@ -1,11 +1,15 @@
 #sidebar__ul {
     .sidebar__li {
+        background-color: transparent;
+        transition: var(--transition);
 
         .sidebar__link {
-            transition: .4s ease-in-out;
+
             font-family: "DM Sans";
             font-size: .9rem;
             font-weight: 500;
+            color: #808191;
+            transition: var(--transition);
 
             &.active,
             &:hover {
