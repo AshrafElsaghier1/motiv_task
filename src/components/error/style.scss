@@ -1,11 +1,11 @@
-.error__btn {
-    background: #a162f7;
+#error__btn {
+    background: var(--main-color);
     color: #fff;
-    box-shadow: #dddddd 6px 7px 3px;
+    box-shadow: #1c1a1a73 6px 8px 2px 0px;
 
     &:hover {
         box-shadow: none;
         background-color: #fff;
-        color: #a162f7;
+        color: var(--main-color);
     }
 }

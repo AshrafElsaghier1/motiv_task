@@ -1,12 +1,12 @@
 .product__container-car {
-    background-color: var(--white-color);
+    background-color: var(--theme-background);
     border-radius: 16px;
     padding: 20px;
     transition: var(--transition);
 
     .product__inner-top {
         h4 {
-            color: var(--secondary-color);
+            color: var(--theme-text-color);
             font-weight: 700;
             font-size: 1.125rem;
         }
@@ -21,7 +21,7 @@
             color: #A4A5A6;
 
             svg {
-
+                transition: .5s ease-in-out;
 
                 &:last-child {
                     display: none;
@@ -56,12 +56,12 @@
         .clients__count,
         .transmission,
         .inner__price {
-            color: #72767C;
+            color: var(--select-color);
             font-weight: 400;
             font-size: 1rem;
 
             .price {
-                color: var(--secondary-color);
+                color: var(--theme-text-color);
                 font-weight: 500;
                 font-size: 18px;
             }

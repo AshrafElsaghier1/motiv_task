@@ -2,7 +2,7 @@
     height: 100vh;
     position: sticky;
     top: 0;
-    background-color: var(--white-color);
+    background-color: var(--theme-background);
     transition: var(--transition);
 
     .sidebar__inner-content {
@@ -15,7 +15,7 @@
                 a {
                     font-weight: 700;
                     font-size: 1.3rem;
-                    color: var(--dark-color);
+                    color: var(--logo-color);
 
                 }
             }

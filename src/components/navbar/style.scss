@@ -1,26 +1,26 @@
 #navbar {
     height: 60px;
-    border-left: 1px solid var(--hover-color);
+    border-left: 1px solid var(--border-color);
     position: sticky;
     top: 0;
-    background-color: var(--white-color);
+    background-color: var(--theme-background);
     transition: var(--transition);
 
     .input__container {
-        background-color: var(--grey-color);
+        background-color: var(--layout-background);
         max-width: 358px;
         border-radius: 8px;
         transition: var(--transition);
 
         input {
             font-size: 1rem;
-            color: var(--text-color);
+            color: #7c7c8d;
             caret-color: #EF9011;
 
             &::placeholder {
                 font-family: 'DM Sans';
                 font-size: 1rem;
-                color: var(--text-color)
+                color: #7c7c8d
             }
         }
     }

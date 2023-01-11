@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+
 import { useNavigate } from "react-router-dom";
 import "./style.scss";
 const Error = () => {
@@ -8,9 +8,9 @@ const Error = () => {
   return (
     <div className="d-flex align-items-center justify-content-center flex-column gap-5  pt-5">
       <h1 className="alert alert-danger h1"> Page Not Found ! </h1>
-      <Button variant="none" onClick={navigationHandler} className="error__btn">
+      <button onClick={navigationHandler} className="btn" id="error__btn">
         Back To Dashboard
-      </Button>
+      </button>
     </div>
   );
 };

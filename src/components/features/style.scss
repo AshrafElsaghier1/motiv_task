@@ -1,15 +1,16 @@
 #feat__container {
-    background-color: var(--theme-background);
+
     padding: 20px 55px;
     border-radius: 14px;
     text-align: center;
     transition: var(--transition);
+    background-color: var(--theme-background);
 
     .feat__inner-top {
         h3 {
             font-weight: 700;
             font-size: 22px;
-            color: var(--secondary-color);
+            color: var(--logo-color);
             transition: var(--transition);
         }
 
@@ -40,7 +41,7 @@
             }
 
             .CircularProgressbar-text {
-                fill: var(--secondary-color);
+                fill: var(--theme-text-color);
                 font-weight: 700;
                 font-size: 22px;
             }

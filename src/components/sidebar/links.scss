@@ -8,12 +8,13 @@
             font-family: "DM Sans";
             font-size: .9rem;
             font-weight: 500;
-            color: #808191;
+            color: var(--link-color);
             transition: var(--transition);
 
             &.active,
             &:hover {
-                background-color: var(--hover-color);
+                background-color: var(--link-background);
+                color: var(--link-active-color);
             }
         }
     }

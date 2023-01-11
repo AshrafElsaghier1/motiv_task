@@ -14,7 +14,7 @@ const Links = () => {
           className="sidebar__li w-100 d-flex align-items-center border-0   p-0 mb-2 "
         >
           <NavLink
-            to={pathLink ? pathLink : "/"}
+            to={pathLink}
             className="sidebar__link w-100 d-flex align-items-center gap-3 rounded p-2  "
           >
             <span> {icon} </span>
