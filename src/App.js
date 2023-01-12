@@ -8,7 +8,6 @@ import { ThemeContext } from './theme/themeContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./app.scss"
 function App() {
-
   const storedTheme = localStorage.length ? localStorage.getItem('theme') : 'light'
   const [theme, setTheme] = useState(storedTheme);
 
