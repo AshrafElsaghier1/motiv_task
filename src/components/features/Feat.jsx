@@ -5,7 +5,7 @@ import "./style.scss";
 const Feat = ({ title, text, precentage, color, icon, bgColor }) => {
   return (
     <Col className="mb-3">
-      <div className="feat__container" id="feat__container">
+      <div className="feat__container">
         <div className="feat__inner-top d">
           <span
             className="icon__container d-flex align-items-center justify-content-center mx-auto mb-3 rounded-circle"
@@ -21,7 +21,6 @@ const Feat = ({ title, text, precentage, color, icon, bgColor }) => {
             value={precentage}
             text={text}
             circleRatio={0.75}
-            transition="0.5s ease 0s"
             rounded={true}
             styles={buildStyles({
               rotation: 1 / 2 + 1 / 8,

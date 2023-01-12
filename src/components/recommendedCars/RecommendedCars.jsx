@@ -13,7 +13,7 @@ const RecomendedCars = () => {
   useEffect(() => {
     dispatch(getRecommendedCars());
   }, [dispatch]);
-  console.log({ recommendedCars });
+
   return (
     <div className="row row-cols-md-3 mt-3">
       {isLoading ? (
