@@ -3,6 +3,7 @@ import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import { CiRepeat } from "react-icons/ci";
 import { useState } from "react";
+
 import "./style.scss";
 const SingleProduct = ({
   name,

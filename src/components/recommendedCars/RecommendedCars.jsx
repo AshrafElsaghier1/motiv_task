@@ -1,12 +1,28 @@
-import { recommendedItems } from "../../dummyData/productsData";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { getRecommendedCars } from "../../features";
+import Spinner from "../spinner/Spinner";
 import RecommendItem from "./RecommendItem";
 
 const RecomendedCars = () => {
+  const { recommendedCars, isLoading, isError } = useSelector(
+    (state) => state.products
+  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getRecommendedCars());
+  }, [dispatch]);
+  console.log({ recommendedCars });
   return (
     <div className="row row-cols-md-3 mt-3">
-      {recommendedItems.map((item) => (
-        <RecommendItem key={item.id} {...item} />
-      ))}
+      {isLoading ? (
+        <Spinner />
+      ) : isError ? (
+        <h1 className="text-center alert alert-danger w-100 ">Network Error</h1>
+      ) : (
+        recommendedCars.map((item) => <RecommendItem key={item.id} {...item} />)
+      )}
     </div>
   );
 };

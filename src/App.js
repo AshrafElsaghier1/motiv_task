@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { ThemeContext } from './theme/themeContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./app.scss"
+
 function App() {
   const storedTheme = localStorage.length ? localStorage.getItem('theme') : 'light'
   const [theme, setTheme] = useState(storedTheme);
@@ -17,6 +18,9 @@ function App() {
   useEffect(() => {
     localStorage.setItem("theme", theme);
   }, [theme])
+
+
+
 
   return (
     <ThemeContext.Provider value={{ toggleThemeHandler, theme }}>

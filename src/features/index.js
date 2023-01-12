@@ -1,2 +1,2 @@
 
-export { getProducts, productsReducer } from "./products/productsSlice"
+export { getProducts, productsReducer, getRecommendedCars } from "./products/productsSlice"

@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const baseURL = 'https://e-commerce-api-y4mu.onrender.com/data';
+const baseURL = 'https://motive-2ih2.onrender.com';
 
-export const fetchProducts = () => {
+export const fetchProducts = (endpoint) => {
 
-  return axios.get(baseURL);
+  return axios.get(`${baseURL}/${endpoint}`);
 
 
 }
