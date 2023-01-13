@@ -1,6 +1,6 @@
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import { useState } from "react";
+
 import { Chart, LineAdvance } from "bizcharts";
 import { Col } from "react-bootstrap";
 
