@@ -5,6 +5,7 @@
     top: 0;
     background-color: var(--theme-background);
     transition: var(--transition);
+    z-index: 999999;
 
     .input__container {
         background-color: var(--layout-background);
