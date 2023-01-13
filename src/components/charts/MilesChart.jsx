@@ -7,7 +7,7 @@ import { Col } from "react-bootstrap";
 import { data4, data5, data6 } from "../../dummyData/chartsData";
 const MilesChart = () => {
   return (
-    <Col>
+    <Col className="mb-3">
       <div
         id="chart__container-1"
         className="chart__container position-relative"

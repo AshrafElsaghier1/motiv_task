@@ -20,7 +20,7 @@ const CarChart = () => {
     })
   );
   return (
-    <Col>
+    <Col className="mb-3">
       <div id="chart__container" className=" position-relative">
         <h2 className="chart__heading mb-3">
           <b>Miles</b> Statistics
