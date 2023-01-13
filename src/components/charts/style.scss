@@ -1,0 +1,79 @@
+#chart__container {
+    padding: 15px 25px;
+    background: var(--theme-background);
+    border-radius: 14px;
+
+    .chart__heading {
+        font-size: 20px;
+        color: var(--theme-text-color);
+    }
+
+    h5 {
+        position: absolute;
+        right: 24px;
+        top: 64px;
+        font-weight: 700;
+        font-size: 14px;
+        color: var(--link-active-color)
+    }
+
+    .charts__tabs-one {
+        margin-bottom: 10px;
+
+        .nav-item {
+            button {
+                border: none;
+                background-color: transparent;
+                font-weight: 700;
+                font-size: 13px;
+                color: var(--link-active-color);
+                border-radius: 24px;
+                padding: 5px 16px;
+
+                &:is(.active,
+                    :hover) {
+                    background-color: #2884FF;
+                    color: #fff
+                }
+            }
+        }
+
+
+    }
+}
+
+.g2-tooltip {
+    background: #282B32 !important;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.14) !important;
+    border-radius: 5px;
+    color: #FFFFFF !important;
+    font-size: 10px !important;
+    font-weight: 700;
+
+    .g2-tooltip-title {
+        margin: 6px 0 !important;
+    }
+
+    .g2-tooltip-list {
+        display: flex;
+
+        .g2-tooltip-marker {
+            margin: 0 !important;
+        }
+
+        .g2-tooltip-list-item {
+            display: flex;
+            align-items: center;
+            margin-top: 0 !important;
+            gap: 2px;
+
+            .g2-tooltip-value {
+                margin-left: 0 !important;
+            }
+
+            .g2-tooltip-name {
+                display: none;
+            }
+        }
+    }
+}

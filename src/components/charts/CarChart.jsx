@@ -1,125 +1,144 @@
 import { Card } from "antd";
 import { useState } from "react";
-import {
-  G2,
-  Chart,
-  Geom,
-  Axis,
-  Tooltip,
-  Coordinate,
-  Label,
-  Legend,
-  Interval,
-} from "bizcharts";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+
+import { Chart, Axis, Tooltip, Coordinate, Legend, Interval } from "bizcharts";
 import { Col } from "react-bootstrap";
 import DataSet from "@antv/data-set";
-
-const data = [
-  {
-    label: "Monday",
-    series1: 2800,
-  },
-  {
-    label: "Tuesday",
-    series1: 1800,
-  },
-  {
-    label: "Wednesday",
-    series1: 950,
-  },
-  {
-    label: "Thursday",
-    series1: 500,
-  },
-  {
-    label: "Friday",
-    series1: 170,
-  },
-];
-const cols = {
-  month: {
-    range: [0, 1],
-  },
-};
-const tabList = [
-  {
-    key: "tab1",
-    tab: "tab1",
-  },
-  {
-    key: "tab2",
-    tab: "tab2",
-  },
-];
-const ds = new DataSet();
-const dv = ds.createView().source(data);
-dv.transform({
-  type: "fold",
-  fields: ["series1"],
-  // 展开字段集
-  key: "type",
-
-  value: "value", // value字段
-});
-
-const contentList = {
-  tab1: (
-    <Chart height={300} data={dv.rows} autoFit>
-      <Legend />
-      <Coordinate actions={[["scale", 1, -1], ["transpose"]]} />
-      <Axis
-        name="label"
-        label={{
-          offset: 12,
-        }}
-      />
-      <Axis name="value" position={"right"} />
-      <Tooltip />
-      <Interval
-        position="label*value"
-        color={"type"}
-        adjust={[
-          {
-            type: "dodge",
-            marginRatio: 1 / 32,
-          },
-        ]}
-      />
-    </Chart>
-  ),
-  tab2: <p>content2</p>,
-};
-
-const contentListNoTitle = {
-  article: <p>article content</p>,
-  app: <p>app content</p>,
-  project: <p>project content</p>,
-};
-
-const Curved = () => {
-  const [activeTabKey1, setActiveTabKey1] = useState("tab1");
-  const [activeTabKey2, setActiveTabKey2] = useState("app");
-  const onTab1Change = (key) => {
-    setActiveTabKey1(key);
-  };
-
+import "./style.scss";
+import { data, data2, data3 } from "../../dummyData/chartsData";
+const CarChart = () => {
+  const ds = new DataSet();
+  const dv = ds.createView().source(data);
+  const dv2 = ds.createView().source(data2);
+  const dv3 = ds.createView().source(data3);
+  [dv, dv2, dv3].forEach((dv) =>
+    dv.transform({
+      type: "fold",
+      fields: ["Miles"],
+      key: "type",
+      value: "value",
+    })
+  );
   return (
     <Col>
-      <Card
-        style={{
-          width: "100%",
-        }}
-        title="Card title"
-        extra={<a href="#">More</a>}
-        tabList={tabList}
-        activeTabKey={activeTabKey1}
-        onTabChange={(key) => {
-          onTab1Change(key);
-        }}
-      >
-        {contentList[activeTabKey1]}
-      </Card>
+      <div id="chart__container" className=" position-relative">
+        <h2 className="chart__heading mb-3">
+          <b>Miles</b> Statistics
+        </h2>
+        <h5> 256 Miles</h5>
+        <Tabs
+          defaultActiveKey="day"
+          id="charts__tabs-one"
+          className="mb-3 charts__tabs-one  d-flex gap-2 algin-items-center border-0 "
+        >
+          <Tab eventKey="day" title="Day">
+            <Chart
+              height={300}
+              data={dv.rows}
+              autoFit
+              interactions={["element-highlight"]}
+              onGetG2Instance={(c) => {
+                c.geometries[0].elements.forEach((e, idx) => {
+                  e.setState(idx === 0 ? "active" : "inactive", true);
+                });
+              }}
+            >
+              <Legend />
+              <Coordinate actions={[["scale", 1, -1], ["transpose"]]} />
+              <Axis
+                name="label"
+                label={{
+                  offset: 12,
+                }}
+              />
+              <Axis name="value" position={"left"} visible={false} />
+              <Tooltip />
+              <Interval
+                position="label*value"
+                color={"#2884FF"}
+                adjust={[
+                  {
+                    type: "dodge",
+                    marginRatio: 1 / 32,
+                  },
+                ]}
+              />
+            </Chart>
+          </Tab>
+          <Tab eventKey="week" title="Week">
+            <Chart
+              height={300}
+              data={dv2.rows}
+              autoFit
+              interactions={["element-highlight"]}
+              onGetG2Instance={(c) => {
+                c.geometries[0].elements.forEach((e, idx) => {
+                  e.setState(idx === 0 ? "active" : "inactive", true);
+                });
+              }}
+            >
+              <Legend />
+              <Coordinate actions={[["scale", 1, -1], ["transpose"]]} />
+              <Axis
+                name="label"
+                label={{
+                  offset: 12,
+                }}
+              />
+              <Axis name="value" position={"left"} visible={false} />
+              <Tooltip />
+              <Interval
+                position="label*value"
+                color={"#2884FF"}
+                adjust={[
+                  {
+                    type: "dodge",
+                    marginRatio: 1 / 32,
+                  },
+                ]}
+              />
+            </Chart>
+          </Tab>
+          <Tab eventKey="month" title="Month">
+            <Chart
+              height={300}
+              data={dv3.rows}
+              autoFit
+              interactions={["element-highlight"]}
+              onGetG2Instance={(c) => {
+                c.geometries[0].elements.forEach((e, idx) => {
+                  e.setState(idx === 0 ? "active" : "inactive", true);
+                });
+              }}
+            >
+              <Legend />
+              <Coordinate actions={[["scale", 1, -1], ["transpose"]]} />
+              <Axis
+                name="label"
+                label={{
+                  offset: 12,
+                }}
+              />
+              <Axis name="value" position={"left"} visible={false} />
+              <Tooltip />
+              <Interval
+                position="label*value"
+                color={"#2884FF"}
+                adjust={[
+                  {
+                    type: "dodge",
+                    marginRatio: 1 / 32,
+                  },
+                ]}
+              />
+            </Chart>
+          </Tab>
+        </Tabs>
+      </div>
     </Col>
   );
 };
-export default Curved;
+
+export default CarChart;
