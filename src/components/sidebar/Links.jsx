@@ -4,6 +4,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import { navigationItems } from "../../dummyData/navigationData";
 
 import "./links.scss";
+
 const Links = () => {
   return (
     <ListGroup id="sidebar__ul">
@@ -15,10 +16,11 @@ const Links = () => {
         >
           <NavLink
             to={pathLink}
-            className="sidebar__link w-100 d-flex align-items-center gap-3 rounded p-2  "
+            className="sidebar__link w-100 d-flex align-items-center gap-3  p-2  "
+            data-tooltip={link}
           >
             <span> {icon} </span>
-            <span> {link} </span>
+            <span className="d-none d-md-block"> {link} </span>
           </NavLink>
         </ListGroup.Item>
       ))}

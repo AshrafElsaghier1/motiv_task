@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className=" d-flex align-items-center" id="navbar">
-      <Container className="px-4">
+      <Container className="px-md-4">
         <Row>
           <Col className="d-flex align-items-center">
             <InputGroup className="input__container rounded">

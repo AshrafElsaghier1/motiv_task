@@ -13,10 +13,10 @@
     h5 {
         position: absolute;
         right: 24px;
-        top: 64px;
         font-weight: 700;
         font-size: 14px;
-        color: var(--link-active-color)
+        color: var(--link-active-color);
+        top: 60px;
     }
 
     .charts__tabs-one {
@@ -68,6 +68,7 @@
         h5 {
             right: auto;
             left: 27px;
+            top: 69px;
         }
     }
 }

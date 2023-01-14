@@ -73,4 +73,40 @@
         }
     }
 
+    @media (max-width:767px) {
+        padding: 10px 15px;
+
+        .product__inner-top {
+            h4 {
+                font-size: 1rem;
+            }
+
+            h6 {
+                font-size: .85rem;
+            }
+        }
+
+        .product__inner-bottom {
+
+            .clients__count,
+            .transmission,
+            .inner__price {
+
+                font-size: .85rem;
+
+                .price {
+                    color: var(--theme-text-color);
+                    font-weight: 500;
+                    font-size: .95rem;
+                }
+            }
+
+            .icon__container {
+                color: var(--main-color);
+
+            }
+        }
+
+
+    }
 }

@@ -16,12 +16,12 @@ const BookingCar = () => {
   }, [dispatch]);
 
   return (
-    <div className="booking__container pt-5" id="booking">
-      <h2 className="title__heading ">Booking</h2>
-      <>
+    <div className="booking__container pt-2 pt-md-5" id="booking">
+      <h2 className="title__heading mb-3 mb-md-0">Booking</h2>
+      <div className="d-none d-md-block">
         <Filter />
-      </>
-      <div className="row row-cols-lg-3 ">
+      </div>
+      <div className="row row-cols-1 row-cols-sm-2  row-cols-lg-3 ">
         {isLoading ? (
           <Spinner />
         ) : isError ? (

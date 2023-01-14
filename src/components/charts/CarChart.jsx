@@ -25,7 +25,7 @@ const CarChart = () => {
         <h2 className="chart__heading mb-3">
           <b>Miles</b> Statistics
         </h2>
-        <h5> 256 Miles</h5>
+        <h5 className="d-none d-md-block"> 256 Miles</h5>
         <Tabs
           defaultActiveKey="day"
           id="charts__tabs-one"

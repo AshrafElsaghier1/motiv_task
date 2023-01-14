@@ -2,6 +2,7 @@
 
 body {
   font-family: "DM Sans", sans-serif;
+  --main-color: #a162f7;
 }
 ::selection {
   background-color: var(--main-color);

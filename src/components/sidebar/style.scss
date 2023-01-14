@@ -6,6 +6,8 @@
     transition: var(--transition);
 
     .sidebar__inner-content {
+        height: 100vh;
+
         .sidebar__top {
             .logo {
                 height: 60px;
@@ -25,4 +27,6 @@
     .theme__mode {
         color: #808191
     }
+
+
 }
