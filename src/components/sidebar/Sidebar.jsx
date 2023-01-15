@@ -1,6 +1,6 @@
 import { Container, ListGroup, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/imgs/logo.png";
+import logo from "/assets/imgs/logo.png";
 import Links from "./Links";
 import { FiSettings } from "react-icons/fi";
 import { SlLogout } from "react-icons/sl";

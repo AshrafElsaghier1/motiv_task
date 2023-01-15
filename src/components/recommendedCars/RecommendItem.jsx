@@ -2,7 +2,7 @@ import { Col } from "react-bootstrap";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { BsPatchPlus } from "react-icons/bs";
 import { CiRepeat } from "react-icons/ci";
-import vector from "../../assets/imgs/icons/Vector.png";
+import vector from "/assets/imgs/icons/Vector.png";
 import "./style.scss";
 const RecommendItem = ({ bgColor, title, name, price, imgUrl, distance }) => {
   return (
