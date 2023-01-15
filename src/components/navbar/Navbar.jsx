@@ -24,7 +24,7 @@ const Navbar = () => {
                 id="basic-addon1"
                 className=" border-0 bg-transparent"
               >
-                <img src={searchIcon} alt="search_icon" width="15" />
+                <img src={searchIcon} alt="search_icon" width="14" />
               </InputGroup.Text>
               <Form.Control
                 placeholder="Search or type"
@@ -33,7 +33,7 @@ const Navbar = () => {
               />
             </InputGroup>
           </Col>
-          <Col>
+          <Col className="d-flex justify-content-end">
             <div className="sittings__container d-flex justify-content-end align-items-center gap-4 ">
               <div className="notification__icon d-flex align-items-center gap-3">
                 <button
@@ -44,13 +44,18 @@ const Navbar = () => {
                     {theme === "dark" ? <CiLight /> : <MdOutlineNightlight />}
                   </span>
                 </button>
-                <img src={notification} alt="notification_icon" />
+                <img src={notification} alt="notification_icon" width="14" />
               </div>
 
               <DropdownButton
                 id="dropdown-basic-button"
                 title={
-                  <img src={avatar} alt="avatar" className="rounded-circle" />
+                  <img
+                    src={avatar}
+                    alt="avatar"
+                    className="rounded-circle"
+                    width="40"
+                  />
                 }
                 variant="none"
                 className="p-0"
