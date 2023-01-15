@@ -33,6 +33,7 @@ const CarChart = () => {
         >
           <Tab eventKey="day" title="Day">
             <Chart
+              className="w-100"
               height={300}
               data={dv.rows}
               autoFit
@@ -69,6 +70,7 @@ const CarChart = () => {
             <Chart
               height={300}
               data={dv2.rows}
+              className="w-100"
               autoFit
               interactions={["element-highlight"]}
               onGetG2Instance={(c) => {
@@ -104,6 +106,7 @@ const CarChart = () => {
               height={300}
               data={dv3.rows}
               autoFit
+              className="w-100"
               interactions={["element-highlight"]}
               onGetG2Instance={(c) => {
                 c.geometries[0].elements.forEach((e, idx) => {

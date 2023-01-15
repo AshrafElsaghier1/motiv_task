@@ -22,7 +22,7 @@ const MilesChart = () => {
           className="mb-3 charts__tabs-one  d-flex gap-2 algin-items-center border-0 "
         >
           <Tab eventKey="day" title="Day">
-            <Chart height={290} data={data4} autoFit>
+            <Chart height={290} data={data4} autoFit className="w-100">
               <LineAdvance
                 shape="smooth"
                 point
@@ -33,7 +33,7 @@ const MilesChart = () => {
             </Chart>
           </Tab>
           <Tab eventKey="week" title="Week">
-            <Chart height={290} data={data5} autoFit>
+            <Chart height={290} data={data5} autoFit className="w-100">
               <LineAdvance
                 shape="smooth"
                 point
@@ -44,7 +44,7 @@ const MilesChart = () => {
             </Chart>
           </Tab>
           <Tab eventKey="month" title="Month">
-            <Chart height={290} data={data6} autoFit>
+            <Chart height={290} data={data6} autoFit className="w-100">
               <LineAdvance
                 shape="smooth"
                 point

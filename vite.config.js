@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+
 export default defineConfig({
   plugins: [react()],
-  baser: "/motiv_task"
+  baser: "./motiv_task/",
+  build: {
+    chunkSizeWarningLimit: 2800,
+  },
 })
