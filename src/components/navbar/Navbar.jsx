@@ -61,10 +61,10 @@ const Navbar = () => {
                 className="p-0"
               >
                 <Dropdown.Item as="button">
-                  <NavLink to="/motiv_task/sittings">Settings </NavLink>
+                  <NavLink to="/sittings">Settings </NavLink>
                 </Dropdown.Item>
                 <Dropdown.Item as="button">
-                  <NavLink to="/motiv_task/logout">Log out </NavLink>
+                  <NavLink to="/logout">Log out </NavLink>
                 </Dropdown.Item>
               </DropdownButton>
             </div>
