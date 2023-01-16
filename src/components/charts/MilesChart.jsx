@@ -2,7 +2,7 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 
 import { Chart, LineAdvance } from "bizcharts";
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 import { data4, data5, data6 } from "../../dummyData/chartsData";
 const MilesChart = () => {
@@ -22,37 +22,50 @@ const MilesChart = () => {
           className="mb-3 charts__tabs-one  d-flex gap-2 algin-items-center border-0 "
         >
           <Tab eventKey="day" title="Day">
-            <Chart height={290} data={data4} autoFit className="w-100">
-              <LineAdvance
-                shape="smooth"
-                point
-                area
-                position="label*Miles"
-                color="#FF764C"
-              />
-            </Chart>
+            <Row>
+              <Col>
+                <Chart height={290} data={data4} autoFit className="w-100">
+                  <LineAdvance
+                    shape="smooth"
+                    point
+                    area
+                    position="label*Miles"
+                    color="#FF764C"
+                  />
+                </Chart>
+              </Col>
+            </Row>
           </Tab>
           <Tab eventKey="week" title="Week">
-            <Chart height={290} data={data5} autoFit className="w-100">
-              <LineAdvance
-                shape="smooth"
-                point
-                area
-                position="label*Miles"
-                color="#FF764C"
-              />
-            </Chart>
+            <Row>
+              <Col>
+                <Chart height={290} data={data5} autoFit className="w-100">
+                  <LineAdvance
+                    shape="smooth"
+                    point
+                    area
+                    position="label*Miles"
+                    color="#FF764C"
+                  />
+                </Chart>
+              </Col>
+            </Row>
           </Tab>
           <Tab eventKey="month" title="Month">
-            <Chart height={290} data={data6} autoFit className="w-100">
-              <LineAdvance
-                shape="smooth"
-                point
-                area
-                position="label*Miles"
-                color="#FF764C"
-              />
-            </Chart>
+            {" "}
+            <Row>
+              <Col>
+                <Chart height={290} data={data6} autoFit className="w-100">
+                  <LineAdvance
+                    shape="smooth"
+                    point
+                    area
+                    position="label*Miles"
+                    color="#FF764C"
+                  />
+                </Chart>
+              </Col>
+            </Row>
           </Tab>
         </Tabs>
       </div>

@@ -31,18 +31,19 @@
                 padding: 0 6px;
                 width: 100%;
                 justify-content: center;
+                z-index: 999 !important;
             }
 
             &::before {
                 content: "";
                 position: absolute;
                 right: -15px;
-                z-index: 1;
                 border: 10px solid transparent;
                 border-right-color: var(--link-background);
                 transform: scale(0);
-
                 width: 100%;
+                z-index: 999 !important;
+
             }
 
 
@@ -52,11 +53,12 @@
                 color: var(--link-active-color);
             }
 
-            @media (max-width: 400px) {
+            @media (max-width: 500px) {
 
                 &.active,
                 &:hover {
                     background-color: transparent;
+                    border-radius: 0;
 
                 }
             }

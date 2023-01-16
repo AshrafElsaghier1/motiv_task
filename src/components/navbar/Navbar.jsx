@@ -1,9 +1,9 @@
 import { Col, Container, Dropdown, DropdownButton, Row } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import searchIcon from "/assets/imgs/icons/search.png";
-import notification from "/assets/imgs/icons/notification.png";
-import avatar from "/assets/imgs/icons/avatar.png";
+import searchIcon from "../../assets/imgs/icons/search.png";
+import notification from "../../assets/imgs/icons/notification.png";
+import avatar from "../../assets/imgs/icons/avatar.png";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../../theme/themeContext";
@@ -54,17 +54,17 @@ const Navbar = () => {
                     src={avatar}
                     alt="avatar"
                     className="rounded-circle"
-                    width=""
+                    width="32"
                   />
                 }
                 variant="none"
                 className="p-0"
               >
                 <Dropdown.Item as="button">
-                  <NavLink to="/">Settings </NavLink>
+                  <NavLink to="/motiv_task/sittings">Settings </NavLink>
                 </Dropdown.Item>
                 <Dropdown.Item as="button">
-                  <NavLink to="/">Log out </NavLink>
+                  <NavLink to="/motiv_task/logout">Log out </NavLink>
                 </Dropdown.Item>
               </DropdownButton>
             </div>

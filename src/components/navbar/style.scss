@@ -32,6 +32,28 @@
             cursor: pointer;
         }
 
+        .dropdown-menu {
+            background-color: var(--theme-background);
+
+            button {
+                transition: var(--transition);
+
+                a {
+                    color: var(--link-color);
+                    transition: var(--transition);
+                }
+
+                &:hover {
+                    background-color: var(--link-background);
+
+                    a {
+                        color: var(--link-active-color);
+                    }
+                }
+
+            }
+        }
+
         #dropdown-basic-button {
             border: none;
             padding: 0;
@@ -41,8 +63,22 @@
             }
         }
 
+
         .theme__mode {
             color: #808191
         }
+    }
+
+    @media (max-width:767px) {
+        .input__container {
+            input {
+                font-size: .85rem;
+
+                &::placeholder {
+                    font-size: .85rem;
+                }
+            }
+        }
+
     }
 }

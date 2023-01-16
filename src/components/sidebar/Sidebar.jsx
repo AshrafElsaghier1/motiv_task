@@ -1,6 +1,6 @@
-import { Container, ListGroup, Navbar } from "react-bootstrap";
+import { Container, ListGroup } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-import logo from "/assets/imgs/logo.png";
+import logo from "../../assets/imgs/logo.png";
 import Links from "./Links";
 import { FiSettings } from "react-icons/fi";
 import { SlLogout } from "react-icons/sl";
@@ -14,9 +14,12 @@ const Sidebar = () => {
         <div className="sidebar__inner-content d-flex justify-content-between flex-column  w-100">
           <div className="sidebar__top">
             <div className="logo justify-content-center justify-content-md-start ">
-              <Link to="/" className="d-flex gap-2 align-items-center ">
+              <Link
+                to="/motiv_task/dashboard"
+                className="d-flex gap-2 align-items-center "
+              >
                 <div className="d-flex align-items-center ">
-                  <img src={logo} alt="logo" />
+                  <img src={`${logo}`} alt="logo" />
                 </div>
                 <h2 className="mb-0 d-none d-md-block"> Motiv.</h2>
               </Link>
@@ -32,7 +35,7 @@ const Sidebar = () => {
                 className="sidebar__li w-100 d-flex align-items-center border-0 rounded  p-0 mb-2"
               >
                 <NavLink
-                  to="/sittings"
+                  to="motiv_task/sittings"
                   className="sidebar__link w-100 d-flex align-items-center gap-3 rounded p-2 "
                   data-tooltip="Sittings"
                 >
@@ -47,7 +50,7 @@ const Sidebar = () => {
                 className="sidebar__li w-100 d-flex align-items-center border-0   p-0 mb-2"
               >
                 <NavLink
-                  to="/logout"
+                  to="/motiv_task/logout"
                   className="sidebar__link w-100 d-flex align-items-center gap-3  p-2  "
                   data-tooltip="Log out"
                 >
