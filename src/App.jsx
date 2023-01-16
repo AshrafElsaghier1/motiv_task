@@ -25,12 +25,9 @@ function App() {
     <ThemeContext.Provider value={{ toggleThemeHandler, theme }}>
       <div id={theme} className="app">
         <Routes>
-          <Route path="/motiv_task" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
             <Route />
-            <Route
-              path="/motiv_task"
-              element={<Navigate to="/motiv_task/dashboard" />}
-            />
+            <Route path="/" element={<Navigate to="/dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="booking" element={<BookingCar />} />
             <Route path="*" element={<Error />} />

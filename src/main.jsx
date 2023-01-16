@@ -9,7 +9,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-    <Router basename="/motiv_task">
+    <Router basename="/motiv_task/">
       <App />
     </Router>
   </Provider>

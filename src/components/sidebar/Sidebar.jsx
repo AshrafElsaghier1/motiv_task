@@ -15,7 +15,7 @@ const Sidebar = () => {
           <div className="sidebar__top">
             <div className="logo justify-content-center justify-content-md-start ">
               <Link
-                to="/motiv_task/dashboard"
+                to="/dashboard"
                 className="d-flex gap-2 align-items-center "
               >
                 <div className="d-flex align-items-center ">
@@ -35,7 +35,7 @@ const Sidebar = () => {
                 className="sidebar__li w-100 d-flex align-items-center border-0 rounded  p-0 mb-2"
               >
                 <NavLink
-                  to="motiv_task/sittings"
+                  to="sittings"
                   className="sidebar__link w-100 d-flex align-items-center gap-3 rounded p-2 "
                   data-tooltip="Sittings"
                 >
@@ -50,7 +50,7 @@ const Sidebar = () => {
                 className="sidebar__li w-100 d-flex align-items-center border-0   p-0 mb-2"
               >
                 <NavLink
-                  to="/motiv_task/logout"
+                  to="logout"
                   className="sidebar__link w-100 d-flex align-items-center gap-3  p-2  "
                   data-tooltip="Log out"
                 >
