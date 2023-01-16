@@ -24,7 +24,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ toggleThemeHandler, theme }}>
       <div id={theme} className="app">
-        <Routes>
+        <Routes basename="/motiv_task">
           <Route path="/motiv_task" element={<Layout />}>
             <Route />
             <Route
