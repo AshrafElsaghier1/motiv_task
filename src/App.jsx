@@ -26,8 +26,7 @@ function App() {
       <div id={theme} className="app">
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route />
-            <Route path="/" element={<Navigate to="/dashboard" />} />
+            <Route path="/" element={<Navigate to="dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="booking" element={<BookingCar />} />
             <Route path="*" element={<Error />} />
