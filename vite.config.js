@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: "https://ashrafelsaghier1.github.io/motiv_task/",
+  base: "/motiv_task/",
   build: {
     chunkSizeWarningLimit: 2800,
   },
