@@ -2,7 +2,7 @@ import { Col, Form, Row } from "react-bootstrap";
 import { BsUiRadiosGrid } from "react-icons/bs";
 import { RxMixerHorizontal } from "react-icons/rx";
 import "./style.scss";
-const Filter = () => {
+const Filter = ({ smallGridHandler, largeGridHandler, grid }) => {
   return (
     <div id="filter__container">
       <Row className="d-flex align-items-stretch ">
@@ -21,10 +21,20 @@ const Filter = () => {
           </div>
         </Col>
         <Col className="d-flex justify-content-end gap-3 ">
-          <button className="btn filter__btn border-0 rounded-circle d-flex align-items-center ">
+          <button
+            onClick={largeGridHandler}
+            className={`btn filter__btn border-0 rounded-circle d-flex align-items-center ${
+              grid ? "active" : ""
+            } `}
+          >
             <BsUiRadiosGrid />
           </button>
-          <button className="btn filter__btn active border-0 rounded-circle d-flex align-items-center">
+          <button
+            className={`btn filter__btn  border-0 rounded-circle d-flex align-items-center  ${
+              grid ? "" : "active"
+            }  `}
+            onClick={smallGridHandler}
+          >
             <RxMixerHorizontal />
           </button>
         </Col>
