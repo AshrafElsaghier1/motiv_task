@@ -13,6 +13,7 @@
             transition: var(--transition);
             border-radius: 8px;
 
+
             &::after {
                 content: attr(data-tooltip);
                 position: absolute;
@@ -53,28 +54,43 @@
                 color: var(--link-active-color);
             }
 
-            @media (max-width: 500px) {
 
-                &.active,
-                &:hover {
-                    border-radius: 0;
-
-                }
-            }
-
-            @media (max-width:767px) {
-                &:hover {
-                    border-radius: 8px 0 0 8px;
-
-                    &:after,
-                    &::before {
-                        transform: scale(1);
-                    }
-
-
-                }
-            }
 
         }
     }
+
+
+
+
+    @media (max-width: 500px) {
+        width: 100%;
+
+
+        .sidebar__link {
+            justify-content: center;
+
+            &.active,
+            &:hover {
+                border-radius: 0 !important;
+
+            }
+        }
+    }
+
+    @media (max-width:767px) {
+        .sidebar__link {
+            &:hover {
+                border-radius: 8px 0 0 8px;
+
+                &:after,
+                &::before {
+                    transform: scale(1);
+                }
+
+
+            }
+        }
+
+    }
+
 }

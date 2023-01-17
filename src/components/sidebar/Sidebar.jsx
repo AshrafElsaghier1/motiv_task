@@ -24,7 +24,7 @@ const Sidebar = () => {
                 <h2 className="mb-0 d-none d-md-block"> Motiv.</h2>
               </Link>
             </div>
-            <div className="sidebar__items pe-md-3 d-flex d-md-block justify-content-center mt-1 mt-md-3">
+            <div className="sidebar__items pe-md-3 d-flex d-md-block justify-content-center mt-1 mt-md-3 w-100">
               <Links />
             </div>
           </div>
