@@ -29,6 +29,7 @@ function App() {
             <Route path="/" element={<Navigate to="dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="booking" element={<BookingCar />} />
+
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>

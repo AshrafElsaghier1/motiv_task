@@ -2,7 +2,7 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 
 import { Chart, Axis, Tooltip, Coordinate, Legend, Interval } from "bizcharts";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import DataSet from "@antv/data-set";
 import "./style.scss";
 import { data, data2, data3 } from "../../dummyData/chartsData";
@@ -20,7 +20,7 @@ const CarChart = () => {
     })
   );
   return (
-    <Col className="mb-3">
+    <Col className="mb-3" xs={12} lg={6}>
       <div id="chart__container" className=" position-relative">
         <h2 className="chart__heading mb-3">
           <b>Miles</b> Statistics
@@ -32,122 +32,109 @@ const CarChart = () => {
           className="mb-3 charts__tabs-one  d-flex gap-2 algin-items-center border-0 "
         >
           <Tab eventKey="day" title="Day">
-            <Row>
-              <Col>
-                <Chart
-                  className="w-100"
-                  height={300}
-                  data={dv.rows}
-                  autoFit
-                  interactions={["element-highlight"]}
-                  onGetG2Instance={(c) => {
-                    c.geometries[0].elements.forEach((e, idx) => {
-                      e.setState(idx === 0 ? "active" : "inactive", true);
-                    });
-                  }}
-                >
-                  <Legend />
-                  <Coordinate actions={[["scale", 1, -1], ["transpose"]]} />
-                  <Axis
-                    name="label"
-                    label={{
-                      offset: 12,
-                    }}
-                  />
-                  <Axis name="value" position={"left"} visible={false} />
-                  <Tooltip />
-                  <Interval
-                    position="label*value"
-                    color={"#2884FF"}
-                    adjust={[
-                      {
-                        type: "dodge",
-                        marginRatio: 1 / 32,
-                      },
-                    ]}
-                  />
-                </Chart>{" "}
-              </Col>
-            </Row>
+            <Chart
+              className="w-100"
+              height={300}
+              data={dv.rows}
+              autoFit
+              interactions={["element-highlight"]}
+              onGetG2Instance={(c) => {
+                c.geometries[0].elements.forEach((e, idx) => {
+                  e.setState(idx === 0 ? "active" : "inactive", true);
+                });
+              }}
+            >
+              <Legend />
+              <Coordinate actions={[["scale", 1, -1], ["transpose"]]} />
+              <Axis
+                name="label"
+                label={{
+                  offset: 12,
+                }}
+              />
+              <Axis name="value" position={"left"} visible={false} />
+              <Tooltip />
+              <Interval
+                position="label*value"
+                color={"#2884FF"}
+                adjust={[
+                  {
+                    type: "dodge",
+                    marginRatio: 1 / 32,
+                  },
+                ]}
+              />
+            </Chart>
           </Tab>
           <Tab eventKey="week" title="Week">
-            <Row>
-              <Col>
-                <Chart
-                  height={300}
-                  data={dv2.rows}
-                  className="w-100"
-                  autoFit
-                  interactions={["element-highlight"]}
-                  onGetG2Instance={(c) => {
-                    c.geometries[0].elements.forEach((e, idx) => {
-                      e.setState(idx === 0 ? "active" : "inactive", true);
-                    });
-                  }}
-                >
-                  <Legend />
-                  <Coordinate actions={[["scale", 1, -1], ["transpose"]]} />
-                  <Axis
-                    name="label"
-                    label={{
-                      offset: 12,
-                    }}
-                  />
-                  <Axis name="value" position={"left"} visible={false} />
-                  <Tooltip />
-                  <Interval
-                    position="label*value"
-                    color={"#2884FF"}
-                    adjust={[
-                      {
-                        type: "dodge",
-                        marginRatio: 1 / 32,
-                      },
-                    ]}
-                  />
-                </Chart>
-              </Col>
-            </Row>
+            <Chart
+              height={300}
+              data={dv2.rows}
+              className="w-100"
+              autoFit
+              interactions={["element-highlight"]}
+              onGetG2Instance={(c) => {
+                c.geometries[0].elements.forEach((e, idx) => {
+                  e.setState(idx === 0 ? "active" : "inactive", true);
+                });
+              }}
+            >
+              <Legend />
+              <Coordinate actions={[["scale", 1, -1], ["transpose"]]} />
+              <Axis
+                name="label"
+                label={{
+                  offset: 12,
+                }}
+              />
+              <Axis name="value" position={"left"} visible={false} />
+              <Tooltip />
+              <Interval
+                position="label*value"
+                color={"#2884FF"}
+                adjust={[
+                  {
+                    type: "dodge",
+                    marginRatio: 1 / 32,
+                  },
+                ]}
+              />
+            </Chart>
           </Tab>
           <Tab eventKey="month" title="Month">
-            {" "}
-            <Row>
-              <Col>
-                <Chart
-                  height={300}
-                  data={dv3.rows}
-                  autoFit
-                  className="w-100"
-                  interactions={["element-highlight"]}
-                  onGetG2Instance={(c) => {
-                    c.geometries[0].elements.forEach((e, idx) => {
-                      e.setState(idx === 0 ? "active" : "inactive", true);
-                    });
-                  }}
-                >
-                  <Legend />
-                  <Coordinate actions={[["scale", 1, -1], ["transpose"]]} />
-                  <Axis
-                    name="label"
-                    label={{
-                      offset: 12,
-                    }}
-                  />
-                  <Axis name="value" position={"left"} visible={false} />
-                  <Tooltip />
-                  <Interval
-                    position="label*value"
-                    color={"#2884FF"}
-                    adjust={[
-                      {
-                        type: "dodge",
-                        marginRatio: 1 / 32,
-                      },
-                    ]}
-                  />
-                </Chart>
-              </Col>
-            </Row>
+            <Chart
+              height={300}
+              data={dv3.rows}
+              autoFit
+              className="w-100"
+              interactions={["element-highlight"]}
+              onGetG2Instance={(c) => {
+                c.geometries[0].elements.forEach((e, idx) => {
+                  e.setState(idx === 0 ? "active" : "inactive", true);
+                });
+              }}
+            >
+              <Legend />
+              <Coordinate actions={[["scale", 1, -1], ["transpose"]]} />
+              <Axis
+                name="label"
+                label={{
+                  offset: 12,
+                }}
+              />
+              <Axis name="value" position={"left"} visible={false} />
+              <Tooltip />
+              <Interval
+                position="label*value"
+                color={"#2884FF"}
+                adjust={[
+                  {
+                    type: "dodge",
+                    marginRatio: 1 / 32,
+                  },
+                ]}
+              />
+            </Chart>
           </Tab>
         </Tabs>
       </div>
