@@ -15,7 +15,6 @@ const BookingCar = () => {
     dispatch(getProducts());
   }, [dispatch]);
   const [smallGrid, setSmallGrid] = useState(false);
-
   const smallGridHandler = () => setSmallGrid(false);
   const largeGridHandler = () => setSmallGrid(true);
 
