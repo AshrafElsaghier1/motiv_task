@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = 'https://motive-2ih2.onrender.com';
+const baseURL = 'https://motiv-data.onrender.com';
 
 export const fetchProducts = (endpoint) => {
 
