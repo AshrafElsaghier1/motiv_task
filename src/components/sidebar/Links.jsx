@@ -16,7 +16,8 @@ const Links = () => {
         >
           <NavLink
             to={pathLink}
-            className="sidebar__link w-100 d-flex align-items-center gap-3  p-2  "
+            className={`sidebar__link w-100 d-flex align-items-center gap-3  p-2  `}
+            disabled={true}
             data-tooltip={link}
           >
             <span> {icon} </span>

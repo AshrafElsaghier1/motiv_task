@@ -3,7 +3,6 @@
         background-color: transparent;
         transition: var(--transition);
 
-
         .sidebar__link {
 
             font-family: "DM Sans";
@@ -51,7 +50,7 @@
 
 
             &.active,
-            &:hover {
+            &:hover:not(.disabled) {
                 background-color: var(--link-background);
                 color: var(--link-active-color);
             }
