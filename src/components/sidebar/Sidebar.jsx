@@ -32,21 +32,6 @@ const Sidebar = () => {
             <ListGroup id="sidebar__ul">
               <ListGroup.Item
                 as="button"
-                className="sidebar__li w-100 d-flex align-items-center border-0 rounded  p-0 mb-2"
-              >
-                <NavLink
-                  to="sittings"
-                  className="sidebar__link w-100 d-flex align-items-center gap-3 rounded p-2 "
-                  data-tooltip="Sittings"
-                >
-                  <span>
-                    <FiSettings />
-                  </span>
-                  <span className="d-none d-md-block">Sittings </span>
-                </NavLink>
-              </ListGroup.Item>
-              <ListGroup.Item
-                as="button"
                 className="sidebar__li w-100 d-flex align-items-center border-0   p-0 mb-2"
               >
                 <NavLink
